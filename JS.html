@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<base target="_blank">
+	<title>第一个JS</title>
+
+
+	<!-- <script src="func1.js"></script> -->
+	<script language="javascript">
+		// for(var Property in window.location)
+		// 	window.document.write(Property+":"+window.location[Property]+"<br>");
+		a = 11-'11';
+alert(a);
+		// window.status="---欢迎光临---";
+		// 显示对话框要求用户输入数据
+		// if条件语句
+		// var X=prompt("请输入0-100的数字：","");
+		// if(X<=60) 
+		// 	alert("不及格！");
+		// else if (X>80)
+		// 	alert("优秀！");
+		// else
+		// 	alert("良好！");
+
+		// // for循环
+		// var Y=prompt("请输入正整数(求1-此正整数所有数之和)：","");
+		// var Sum=0;
+		// for (var i = 1; i <= Y; i++) 
+		// {
+		// 	Sum+=i;
+		// }
+		// alert(Sum);
+
+
+		// var Z=prompt("请输入正整数(求0-此正整数数之间所有偶数之和):","");
+		// var Total=0;
+		// for (var i = 0; i <= Z; i+=2) 
+		// {
+		// 	if (i<=Z) {
+		// 		Total+=i;
+		// 	}
+		// 	else
+		// 		break;
+		// }
+		// alert(Total);
+
+		// // 猜数字
+		// var N=prompt("请输入1-10之间的数字(猜数字)：","");
+		// while(N!=6)
+		// {
+		// 	if(N>6)
+		// 	{
+		// 		alert("太大了！");
+		// 		N=prompt("请重新输入：","");
+				
+		// 	}
+		// 	else
+		// 	{
+		// 		alert("太小了！");
+		// 		N=prompt("请重新输入：","");
+
+		// 	}
+			
+				
+		// }
+		// alert("答对了！");
+
+		// for...in
+		
+		// var Student=new Array("熊大","熊二","光头强");
+        //声明包含三个变量的数组
+		// for(var i in Student)
+		// 	alert(Student[i]);
+		// // 上面为正着输出数组
+		// // 下面为倒着输出数组
+		// for (var i = Student.length - 1; i >= 0; i--) 
+		// {
+		// alert(Student[i]);
+		// }
+
+		// // 函数
+		//
+		// function Greeting() // 声明一个函数
+		// {
+		// 	var UserName=prompt("请输入您的姓名：","");
+		// 	alert(UserName+"，欢迎光临！");
+		// }
+
+		// // 摄氏温度转换华氏温度
+		// function Cconvert2F(DC)
+		// {
+		// 	DC=1;
+		// 	return DF=DC*1.8+32;
+		// }
+		// 	var temperature=prompt("请输入当前温度：","");
+		// 	alert("当摄氏温度为:"+temperature+"对应的华氏温度为:"+Cconvert2F(temperature));
+			
+		// alert(isNaN(Number("abc")));
+
+		// Greeting();  //调用一个函数
+
+		// 新窗口操作
+		var myWin=null;  //定义一个变量，次变量存放在open()所返回的window新窗口对象中
+		function openNewWindow()  //打开新窗口
+		{
+			myWin=window.open("new.html","myWin","height=200,width=400");
+			//变量的赋值
+		}
+		function closeNewWindow()  //关闭新窗口
+		{
+			if(myWin && myWin.open && !myWin.closed)//关闭新窗口前，应该先确认其存在，已开启且尚未关闭
+				myWin.close();
+		}
+		function closeWindow()  //关闭本窗口
+		{
+			window.close();
+		}
+
+
+
+
+		// window.document.write(Number.MAX_VALUE+"<br>");
+		// window.document.write(Number.MIN_VALUE+"<br>");
+		// var A = new Number(123.456);
+		// window.document.write(A+"转换为科学记数法为："+A.toExponential()+"<br>");
+		// window.document.write(A+"取到小数点后两位得到："+A.toFixed(2)+"<br>");
+		// var B="javascript";
+		// alert(B.length);
+
+		// window.document.write("link('http://wwww.baidu.com'):"+B.link("http://wwww.baidu.com")+"<br>");
+
+
+		// alert(7*3%8);
+		// alert((4&6)==4?"Yes":"No");
+		// alert("C"+2);
+		// alert(100=="100");
+		// alert(100==="100");
+		// alert("ABCD"<"ABCd");
+		// alert((5<=9)||(!(3>7)));
+		// alert(("abc"!="ABC")|(3>5));
+		// alert(-128>>3);
+
+		// // 半透明效果 （限IE）
+		// function Change(obj){
+		// 	obj.filters.alpha.opacity=50;
+		// }
+		// function Restore(obj){
+		// 	obj.filters.alpha.opacity=100;
+		// }
+
+	</script>
+	<style>
+		a{
+			color: red;
+		}
+
+		body{
+			background-image: url(bg[num]) top center no-repeat;
+			background-size: cover;
+		
+		}
+	</style>
+</head>
+<body>
+	<!-- 函数调用时不用带参数 -->
+	<!-- <h1 onclick="javascript:Cconvert2F();">WELCOME!</h1> -->
+	<a href="javascript:window.openNewWindow();">开启新窗口</a>
+	<a href="javascript:window.closeNewWindow();">关闭新窗口</a>	
+	<a href="javascript:window.closeWindow(0);"> 关闭本窗口</a>
+	
+
+
+	 <!-- Array对象 -->
+	<!-- <table border="1">
+		<script language="javascript">
+			var DrinkNames=new Array("卡布奇诺","拿铁","血腥玛丽","长岛冰茶","蓝色夏威夷");
+			for (var i=0; i<DrinkNames.length; i++) 
+			{
+				document.write("<tr><td>饮料"+(i+1)+"</td>");
+				document.write("<td>"+DrinkNames[i]+"</td></tr><br>");
+			}
+		</script>
+	</table>
+ -->
+	<!-- <script language="javascript">
+		// 随机换背景
+		var bg=new Array();
+		bg[0]="bg1.jpg";
+		bg[1]="bg2.jpg";
+		bg[2]="bg3.jpg";
+		bg[3]="bg4.jpg";
+		bg[4]="bg5.jpg";
+		bg[5]="bg6.jpg";
+		var num=Math.floor(Math.random()*bg.length);
+		document.body.background=bg[num];
+	</script> -->
+
+	
+
+<script language="javascript">
+
+	/*var Scores=new Array(99,58,76,92,60,88,81,95,65,87);
+	var MaxScore=0;
+	var MinScore=100;  //此处需注意
+	//使用循环找出最高分
+	for (var i=0; i<Scores.length; i++) 
+	{
+		if(Scores[i]>MaxScore)
+			MaxScore=Scores[i];
+
+	}
+	for (var i=0; i<Scores.length; i++) 
+	{
+		if(Scores[i]<MinScore)
+			MinScore=Scores[i];
+	}
+	//将结果显示在网页上
+	document.write("最高分为："+MaxScore+"<br>");
+	document.write("最低分为："+MinScore+"<br>");*/
+
+	/*document.write("<hr>");
+	var Students=new Array(5);
+	for (var i=0; i<Students.length; i++) 
+	{
+		Students[i]=new Array(2);
+	}
+	Students[0][0]="超人";
+	Students[1][0]="蜘蛛侠";
+	Students[2][0]="闪电狗";
+	Students[3][0]="小丸子";
+	Students[4][0]="匹诺曹";
+	Students[0][1]=22;
+	Students[1][1]=233;
+	Students[2][1]=83;
+	Students[3][1]=53;
+	Students[4][1]=39;
+	for (var i=0; i<Students.length; i++) 
+	{
+		document.write("<tr>");
+		for(var j=0; j<Students[i].length; j++)
+		{
+			document.write("<td>"+Students[i][j]+"</td>");
+		}
+		document.write("</tr>");
+	}*/
+
+
+	/*var A=new Array("1","2","3");
+	var B=new Array("4","5");
+	var C=A.concat(B);  //合并A,B
+	for (var i=0; i<C.length; i++) 
+	{
+		document.write(C[i]+"<br>");
+	}
+	document.write("<br>");
+	D=C.join("--");  //返回一个所有元素由"--"连接的字符串
+	document.write(D+"<br>");
+	document.write("<br>");
+	E=C.pop();  //删除数组的最后一个元素并返回
+	document.write(E+"<br>");
+	document.write("<br>");
+	C.push("添加");
+	for(var i=0; i<C.length; i++)
+	{
+		document.write(C[i]+"<br>");
+	}
+	document.write("<br>");
+	F=C.shift();
+	document.write(F+"<br>");  //输出删除的元素
+	document.write("<br>");
+	C.shift();
+	for(var i=0; i<C.length; i++)  //输出剩下的元素
+	{
+		document.write(C[i]);
+	}
+	document.write("<br>");
+	C.unshift(D);
+	for(var i=0; i<C.length; i++)
+	{
+		document.write(C[i]+"<br>");
+	
+	}
+	document.write("<br>");
+	C.slice(1,3);
+	for(var i=0; i<C.length; i++)
+	{
+		document.write(C[i]+"<br>");
+	}
+	document.write("<br>");*/
+	
+	/*// 显示location各个对象的值
+	for(var Property in window.location)
+		window.document.write(Property+":"+window.location[Property]+"<br>");
+	// histor对象
+	for(var Property in window.history)
+	{
+		window.document.write(Property+":"+window.history[Property]+"<br>");
+	}*/
+
+
+	// document对象
+	/*function openDocument()
+	{
+		window.document.open("text/html");
+		window.document.write("这是新的HTML文件");
+		window.document.close();
+	}
+	var E1=document.getElementById("CB1");
+	var E2=document.getElementByName("phone");
+	var E3=document.getElementByTarName("input");
+	document.write(E1.id);*/
+
+
+		</script>
+	}
+	<br>
+	<input type="button" value="重载" onclick="javascript:window.location.reload();">
+	<input type="button" value="在新的页面打开百度" onclick="javascript:window.open('http://wwww.baidu.com');">
+	<input type="button" value="从本页面转至百度" onclick="javascript:window.location.replace('http://wwww.baidu.com');">
+	<!-- <input type="button" value="开启新文件" onclick="javascript:openDocument();">
+ -->
+	<!-- <input type="checkbox" name="phone" id="CB1" value="htc">
+	<input type="checkbox" name="phone" id="CB2" value="apple">
+	<input type="checkbox" name="phone" id="CB3" value="asus"> -->
+
+
+	<input type="button" value="上一页" onclick="javascript:window.history.back();">
+	<input type="button" value="下一页" onclick="javascript:window.history.forward();"><br>
+	
+	 <!-- <img src="bg6.jpg" width="500" style="filter: alpha(opacity=100)" 
+	 onmouseover="javascript:Change(this);" onmouseout="javascript:Restore(this);"> -->
+
+
+</body>
+</html>
